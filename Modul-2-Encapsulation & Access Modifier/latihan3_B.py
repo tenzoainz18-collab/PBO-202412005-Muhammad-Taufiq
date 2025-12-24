@@ -1,25 +1,25 @@
 class Mahasiswa:
     def __init__(self, nim, nama, semester, ipk):
-        self.nim = nim                # public
-        self.nama = nama              # public
-        self._semester = semester     # protected
-        self.__ipk = ipk              # private
+        self.nim = nim                
+        self.nama = nama              
+        self._semester = semester     
+        self.__ipk = ipk              
 
-    # Getter protected
+    
     def get_semester(self):
         return self._semester
 
-    # Setter protected
+   
     def set_semester(self, sem_baru):
         if sem_baru <= 0:
             raise ValueError("Semester harus lebih dari 0.")
         self._semester = sem_baru
 
-    # Getter private
+    
     def get_ipk(self):
         return self.__ipk
 
-    # Setter private
+    
     def set_ipk(self, nilai):
         if not (0.0 <= nilai <= 4.0):
             raise ValueError("IPK harus di antara 0.0 - 4.0.")
@@ -44,4 +44,5 @@ if __name__ == "__main__":
     print("NIM:", mhs2.nim)
     print("Nama:", mhs2.nama)
     print("Semester:", mhs2.get_semester())
+
     print("IPK:", mhs2.get_ipk())
