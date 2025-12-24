@@ -7,12 +7,11 @@ class Mahasiswa:
     def __init__(self, nim, nama):
         self.nim = nim
         self.nama = nama
-        self.daftar_nilai = []   # agregasi
+        self.daftar_nilai = []   
 
     def tambah_nilai(self, nilai):
         self.daftar_nilai.append(nilai)
 
-    # (f) METHOD BARU: rata-rata nilai
     def rata_rata(self):
         if not self.daftar_nilai:
             return 0
@@ -27,7 +26,7 @@ class MataKuliah:
 class ProgramStudi:
     def __init__(self, nama):
         self.nama = nama
-        self.daftar_matakuliah = []   # agregasi
+        self.daftar_matakuliah = []   
 
     def tambah_matakuliah(self, mk: MataKuliah):
         self.daftar_matakuliah.append(mk)
@@ -35,16 +34,13 @@ class ProgramStudi:
 class Universitas:
     def __init__(self, nama):
         self.nama = nama
-        self.programs = []   # komposisi
+        self.programs = []  
 
     def buat_program(self, nama_prodi):
         prodi = ProgramStudi(nama_prodi)
         self.programs.append(prodi)
         return prodi
 
-# ===================================
-#===========  Abror =================
-# ===================================
 if __name__ == "__main__":
     uni = Universitas("Universitas A")
 
@@ -117,3 +113,4 @@ if __name__ == "__main__":
     report_program(prodi1, [m1, m2, m3])
     report_program(prodi2, [m1, m2, m3])
     report_program(prodi3, [m1, m2, m3])
+
