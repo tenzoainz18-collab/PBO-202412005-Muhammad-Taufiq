@@ -17,7 +17,7 @@ class Member(Pengguna):
         print(f"{self.nama} memiliki hak akses member.")
 
     def __str__(self):
-        return f"Member: {self.nama} – Poin: {self.poin}"
+        return f"Member: {self.nama} Poin: {self.poin}"
 
     def __add__(self, other):
         return self.poin + other.poin
@@ -42,7 +42,6 @@ def input_poin(prompt):
 
     if nilai < 0:
         raise PoinTidakValidError("Poin tidak boleh negatif!")
-
     return nilai
 
 print("=== Input Data Member ===")
@@ -53,7 +52,6 @@ try:
     nama2 = input("Masukkan nama Member 2: ")
     p2 = input_poin("Masukkan poin Member 2: ")
 
-    # Membuat objek
     m1 = Member(nama1, p1)
     m2 = Member(nama2, p2)
 
@@ -68,7 +66,6 @@ try:
     m1.akses()
     m2.akses()
 
-    # Uji masukan negatif
     print("\n=== Uji Exception Negatif ===")
     input_poin("Masukkan poin negatif untuk uji error: ")
 
