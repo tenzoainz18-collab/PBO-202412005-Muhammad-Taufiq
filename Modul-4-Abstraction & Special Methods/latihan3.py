@@ -45,6 +45,5 @@ def operasi():
     finally:
         print("Selesai memproses input.")
 
-
 if __name__ == "__main__":
     operasi()
