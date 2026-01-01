@@ -16,11 +16,12 @@ class Lingkaran(Bentuk):
 
     def luas(self):
         return math.pi * self.r * self.r
-# Demonstrasi Polymorphism
+
 bentuk_list = [
     Bentuk(),
     Persegi(4),
     Lingkaran(7)
 ]
 for b in bentuk_list:
+
     print(f"{b.__class__.__name__} -> luas = {b.luas()}")
